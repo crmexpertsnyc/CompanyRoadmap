@@ -1,0 +1,114 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ffffff;
+  --accent-color: #673ab7;
+  --font-family: "Roboto", sans-serif;
+  --header-font-size: 2rem;
+  --header-font-weight: 700;
+  --body-padding: 20px;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: var(--body-padding);
+  background-color: var(--secondary-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  font-size: var(--header-font-size);
+  font-weight: var(--header-font-weight);
+  color: var(--primary-color);
+}
+
+.card {
+  background: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 13px;
+  overflow: hidden;
+  height: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-bar-inner {
+  height: 10px;
+  border-radius: 13px;
+  background-color: var(--accent-color);
+  transition: width 0.4s ease;
+}
+
+.roadmap-item {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.roadmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(to right, #e0f7fa, #e1bee7);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.roadmap-header:hover {
+  background: linear-gradient(to right, #b2ebf2, #d1c4e9);
+}
+
+.roadmap-content {
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.benefits {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.5rem;
+  }
+  .card {
+    margin: 10px;
+  }
+}
